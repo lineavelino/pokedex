@@ -106,4 +106,19 @@ h2 {
   width: fit-content;
   border-radius: 8px;
 }
+
+.pokeGrassContainer {
+  background-color: var(--color-grass);
+}
+
+.pokeFireContainer {
+  background-color: var(--color-fire);
+}
+
+.pokeWaterContainer {
+  background-color: var(--color-water);
+}
+
+.pokeEletricContainer {
+  background-color: var(--color-eletric);
 }
