@@ -92,5 +92,18 @@ h2 {
 .pokedex-list img {
   height: 4rem;
 }
+
+.type-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.type-list > li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.5rem;
+  width: fit-content;
+  border-radius: 8px;
+}
 }
