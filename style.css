@@ -23,12 +23,13 @@ body {
 
 header {
   padding: 1.5rem;
+  padding-bottom: 0;
   display: flex;
   justify-content: space-between;
 }
 
 header img {
-  height: 1.5rem;
+  height: 1rem;
 }
 
 .pokeballBackground {
