@@ -5,6 +5,17 @@
   font-family: "Roboto", sans-serif;
 }
 
+:root {
+  --color-gray-100: #f6f6f6;
+  --color-gray-700: #464040;
+  --color-gray-900: #262121;
+
+  --color-grass: #50ccaf;
+  --color-fire: #f56a67;
+  --color-water: #84c1d9;
+  --color-eletric: #fad26a;
+}
+
 body {
   background-color: #f6f6f6;
   color: #262121;
