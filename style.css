@@ -66,5 +66,31 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 0.3rem;
 }
+
+.pokedex-list > li {
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-image: url(/img/pokeball.svg);
+  background-position: right;
+  background-size: 7.5rem;
+  background-repeat: no-repeat;
+  background-position-x: 60px;
+  background-position-y: 10px;
+  background-blend-mode: soft-light;
+}
+
+.pokedex-list section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.pokedex-list img {
+  height: 4rem;
+}
   list-style: none;
 }
