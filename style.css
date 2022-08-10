@@ -10,6 +10,15 @@ body {
   color: #262121;
 }
 
+header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  height: 1.5rem;
+}
 a {
   text-decoration: none;
 }
