@@ -28,7 +28,7 @@ header {
   justify-content: space-between;
 }
 
-header img {
+.icon-header {
   height: 1rem;
 }
 
