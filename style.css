@@ -34,14 +34,15 @@ header img {
 
 .pokeballBackground {
   position: absolute;
-  width: 55%;
-  height: 60%;
-  background-image: url(/img/pokeball.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: -19%;
-  right: -8%;
-  opacity: 0.1;
+  top: -75px;
+  right: -86px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.pokeballBackground img {
+  filter: invert(100%);
+  height: 235px;
 }
 
 a {
