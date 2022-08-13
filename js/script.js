@@ -12,15 +12,6 @@ $.ajax({
           pokeInfo.sprites.other.dream_world.front_default;
         let pokeTypes = pokeInfo.types;
 
-        async function getPokeTypes(pokeTypes) {
-          for (let i = 0; i < pokeTypes.length; i++) {
-            let ulPoke = await document.getElementById(pokeInfo.id);
-            let pokeType = pokeTypes[i].type.name;
-
-            $(ulPoke).append(`<li>${pokeType}</li>`);
-          }
-        }
-
         $("#pokemon-list").append(
           `
             <li class="pokeGrassContainer">
@@ -33,6 +24,14 @@ $.ajax({
           `
         );
 
+        let ulPoke = document.getElementById(pokeInfo.id);
+
+        function addPokeTypes() {
+          for (let i = 0; i < pokeTypes.length; i++) {
+            let pokeType = pokeTypes[i].type.name;
+            $(ulPoke).append(`<li>${pokeType}</li>`);
+          }
+        }
         $(document).ready(getPokeTypes(pokeTypes));
       });
     });
