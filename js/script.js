@@ -14,7 +14,7 @@ $.ajax({
 
         $("#pokemon-list").append(
           `
-            <li class="pokeGrassContainer">
+            <li id=${pokeName}>
               <h2>${pokeName}</h2>
               <section>
                 <ul class="type-list" id=${pokeInfo.id}></ul>
@@ -25,6 +25,7 @@ $.ajax({
         );
 
         let ulPoke = document.getElementById(pokeInfo.id);
+        let containerPoke = document.getElementById(pokeName);
 
         function addPokeTypes() {
           for (let i = 0; i < pokeTypes.length; i++) {
@@ -32,7 +33,21 @@ $.ajax({
             $(ulPoke).append(`<li>${pokeType}</li>`);
           }
         }
-        $(document).ready(getPokeTypes(pokeTypes));
+
+        function capitalizeString(string) {
+          return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function setBackgroundColor() {
+          let firstType = ulPoke.firstChild.textContent;
+          let classCss = `
+            poke${capitalizeString(firstType)}Container
+          `;
+
+          $(containerPoke).addClass(classCss);
+        }
+
+        $(document).ready(addPokeTypes(), setBackgroundColor());
       });
     });
   },
