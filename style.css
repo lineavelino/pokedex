@@ -14,6 +14,12 @@
   --color-fire: #f56a67;
   --color-water: #84c1d9;
   --color-eletric: #fad26a;
+  --color-bug: #87c877;
+  --color-normal: #d6d4d3;
+  --color-poison: #c2a0c7;
+  --color-ground: #d6897b;
+  --color-fairy: #f9d0d4;
+  --color-fighting: #edd090;
 }
 
 body {
@@ -121,6 +127,30 @@ h2 {
   background-color: var(--color-water);
 }
 
-.pokeEletricContainer {
+.pokeElectricContainer {
   background-color: var(--color-eletric);
+}
+
+.pokeBugContainer {
+  background-color: var(--color-bug);
+}
+
+.pokeNormalContainer {
+  background-color: var(--color-normal);
+}
+
+.pokePoisonContainer {
+  background-color: var(--color-poison);
+}
+
+.pokeGroundContainer {
+  background-color: var(--color-ground);
+}
+
+.pokeFairyContainer {
+  background-color: var(--color-fairy);
+}
+
+.pokeFightingContainer {
+  background-color: var(--color-fighting);
 }
