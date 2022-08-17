@@ -1,12 +1,12 @@
 $.ajax({
-  url: "https://pokeapi.co/api/v2/pokemon",
+  url: "https://pokeapi.co/api/v2/pokemon?sort=order:asc,url",
   success: function (data) {
     const pokemons = data.results;
 
-    pokemons.map((pokemon) => {
+    pokemons.map(async (pokemon) => {
       const pokeUrl = pokemon.url;
 
-      $.get(pokeUrl, function (pokeInfo) {
+      await $.get(pokeUrl, function (pokeInfo) {
         const pokeName = pokeInfo.name;
         const pokeImg =
           pokeInfo.sprites.other.dream_world.front_default;
@@ -25,7 +25,8 @@ $.ajax({
         );
 
         let ulPoke = document.getElementById(pokeInfo.id);
-        let containerPoke = document.getElementById(pokeName);
+        let containerPoke =
+          document.getElementById(pokeName);
 
         function addPokeTypes() {
           for (let i = 0; i < pokeTypes.length; i++) {
@@ -35,7 +36,9 @@ $.ajax({
         }
 
         function capitalizeString(string) {
-          return string.charAt(0).toUpperCase() + string.slice(1);
+          return (
+            string.charAt(0).toUpperCase() + string.slice(1)
+          );
         }
 
         function setBackgroundColor() {
@@ -47,7 +50,10 @@ $.ajax({
           $(containerPoke).addClass(classCss);
         }
 
-        $(document).ready(addPokeTypes(), setBackgroundColor());
+        $(document).ready(
+          addPokeTypes(),
+          setBackgroundColor()
+        );
       });
     });
   },
