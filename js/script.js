@@ -3,10 +3,10 @@ $.ajax({
   success: function (data) {
     const pokemons = data.results;
 
-    pokemons.map(async (pokemon) => {
+    for (let pokemon of pokemons) {
       const pokeUrl = pokemon.url;
 
-      await $.get(pokeUrl, function (pokeInfo) {
+      $.get(pokeUrl, function (pokeInfo) {
         const pokeName = pokeInfo.name;
         const pokeImg =
           pokeInfo.sprites.other.dream_world.front_default;
@@ -55,6 +55,6 @@ $.ajax({
           setBackgroundColor()
         );
       });
-    });
+    }
   },
 });
